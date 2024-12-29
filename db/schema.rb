@@ -26,10 +26,10 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_27_191354) do
 
   create_table "journals", force: :cascade do |t|
     t.string "text"
-    t.bigint "patient_id_id"
+    t.bigint "patient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["patient_id_id"], name: "index_journals_on_patient_id_id"
+    t.index ["patient_id"], name: "index_journals_on_patient_id"
   end
 
   create_table "patients", force: :cascade do |t|
