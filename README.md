@@ -1,7 +1,11 @@
 # README
 
-Run `cd db-model-design-queries`
-Run `rails console`
+Change directories into app: Run `cd db-model-design-queries`
+Run `bundle install`
+Run `rails db:create`
+Run `rails db:migrate`
+Run `rails db:seed`
+Run `rails console` to start the rails console REPL
 Run `Patient.all` to find a list of patient names
 Run `Provider.all` to find a list of provider names
 
@@ -12,7 +16,7 @@ Eg. `Patient.joins(:providers).where(providers: {name: "Scott Tarnowsky"})`
 
 **note: Replace `:asc` with `:desc` if you want to reverse the order of queries by date**
 
-QUERIES
+QUERIES: Run these queries in the rails console test.
 ------------------------------------
 ● Find all clients for a particular provider
 `Patient.joins(:providers).where(providers: {name: "provider_name"})`
